@@ -48,17 +48,6 @@ class JobModel extends Eloquent {
         $this->save();
     }
 
-    public function pause() {
-        $this->status_id = JobStatus::PAUSED;
-        $this->save();
-    }
-
-    public function cancel() {
-        $this->status_id = JobStatus::CANCELED;
-        $this->end_at = date('Y-m-d H:i:s', time());
-        $this->save();
-    }
-
     public function error($message = '') {
         $this->status_id = JobStatus::EXITED;
         $this->status_message = $message;

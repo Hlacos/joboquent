@@ -11,13 +11,16 @@ abstract class Job {
     protected $data;
     protected $jobModel;
 
+    public $jobModelClass = 'Hlacos\Joboquent\JobModel';
+
     // Queue methods
     public function fire($job, $data) {
         try {
             DB::connection()->disableQueryLog();
 
             //$this->data = $data;
-            $this->jobModel = JobModel::find($data['id']);
+            $class = $this->jobModelClass;
+            $this->jobModel = $class::find($data['id']);
 
             if (method_exists($this, 'beforeStart')) {
                 $this->beforeStart();

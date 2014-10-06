@@ -8,10 +8,8 @@ class JobStatus extends Eloquent {
 
     const PENDING   = "1";
     const STARTED   = "2";
-    const PAUSED    = "3";
-    const CANCELED  = "4";
-    const EXITED    = "5";
-    const ENDED     = "6";
+    const EXITED    = "3";
+    const ENDED     = "4";
 
     /**
      * The database table used by the model.

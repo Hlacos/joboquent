@@ -26,6 +26,10 @@ $job->run('MyJob');
 
 The string parameter of the run method is the class name of the Worker in the next step.
 
+### Extended JobModel
+
+Feel free to extend this model, just read the extended model section in the worker.
+
 ## Create worker
 Extend Job to make your own working code
 <pre>
@@ -41,6 +45,10 @@ class MyJob extends Job {
     public function work() {}
 }
 </pre>
+
+### Worker use extended JobModel
+
+Only override the $jobModelClass public attribute name to the Extended class name.
 
 ### Callbacks
 
@@ -76,4 +84,3 @@ Don't forget to save related model to the jobModel before it runs.
 # TODO
 
 1. Refactoring / code cleaning.
-2. JobModel pause and cancel methods is in development state.
