@@ -21,16 +21,6 @@ class JobStatusTableSeeder extends Seeder {
         $jobStatus->save();
 
         $jobStatus = new JobStatus;
-        $jobStatus->id = JobStatus::PAUSED;
-        $jobStatus->name = "paused";
-        $jobStatus->save();
-
-        $jobStatus = new JobStatus;
-        $jobStatus->id = JobStatus::CANCELED;
-        $jobStatus->name = "canceled";
-        $jobStatus->save();
-
-        $jobStatus = new JobStatus;
         $jobStatus->id = JobStatus::EXITED;
         $jobStatus->name = "exited";
         $jobStatus->save();

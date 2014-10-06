@@ -1,6 +1,8 @@
 {
     "name": "hlacos/joboquent",
-    "description": "",
+    "description": "Simple bundle to store queued jobs statuses and history.",
+    "keywords": ["laravel", "queue", "job", "worker", "eloquent"],
+    "license": "MIT",
     "authors": [
         {
             "name": "Heiszmann László",
