@@ -6,10 +6,10 @@ Eloquent based Jobs for Laravel
 It's under development, not recommended for production use!
 
 # Install steps
-1. add bundle to composer: "hlacos/joboquent": "*"
+1. add bundle to composer: "hlacos/joboquent": "dev-master"
 2. composer install
 3. add service provider to the providers list: 'Hlacos\Joboquent\JoboquentServiceProvider'
-4. php artisan migrate --bench="hlacos/joboquent"
+4. php artisan migrate --package="hlacos/joboquent"
 5. php artisan db:seed --class="Hlacos\Joboquent\JobStatusTableSeeder"
 
 # Usage

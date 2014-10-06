@@ -18,7 +18,6 @@ abstract class Job {
         try {
             DB::connection()->disableQueryLog();
 
-            //$this->data = $data;
             $class = $this->jobModelClass;
             $this->jobModel = $class::find($data['id']);
 
@@ -35,10 +34,9 @@ abstract class Job {
             $this->jobModel->end();
 
             $job->delete();
-        } catch (Exception $e) {
+        } catch (\Exception $e) {
             DB::connection()->enableQueryLog();
             $this->jobModel->error($e->getMessage());
-            //throw $e;
             $job->delete();
         }
         DB::connection()->enableQueryLog();
